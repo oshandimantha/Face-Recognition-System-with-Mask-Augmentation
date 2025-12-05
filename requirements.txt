@@ -1,0 +1,106 @@
+# Face Recognition System with Mask Augmentation - Requirements
+# Python 3.10+ required
+
+# ============================================================================
+# Web Framework
+# ============================================================================
+Flask>=2.3.0
+Werkzeug>=2.3.0
+
+# ============================================================================
+# Core Computer Vision and Image Processing
+# ============================================================================
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# ============================================================================
+# Deep Learning Framework
+# ============================================================================
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ============================================================================
+# Face Recognition Libraries
+# ============================================================================
+insightface>=0.7.3
+facenet-pytorch>=2.5.3
+
+# ============================================================================
+# Face Detection and Landmarks (for mask augmentation)
+# ============================================================================
+dlib>=19.24.0
+imutils>=0.5.4
+
+# ============================================================================
+# Data Science and Visualization
+# ============================================================================
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# ============================================================================
+# Image Processing Utilities
+# ============================================================================
+imageio>=2.31.0
+albumentations>=1.4.0
+
+# ============================================================================
+# Configuration and Data Handling
+# ============================================================================
+pyyaml>=6.0
+easydict>=1.13
+
+# ============================================================================
+# Optional: GPU Support (uncomment if using CUDA)
+# ============================================================================
+# For CUDA 11.8:
+# torch>=2.0.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision>=0.15.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+
+# For CUDA 12.1:
+# torch>=2.0.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision>=0.15.0+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+
+# ============================================================================
+# Development and Testing (optional)
+# ============================================================================
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# black>=23.0.0
+# flake8>=6.0.0
+
+# ============================================================================
+# Notes
+# ============================================================================
+# 1. masktheface is included as a local directory in this project
+#    It requires the above dependencies to function properly
+#
+# 2. For dlib on Windows, you may need to install from wheel file:
+#    pip install dlib-19.22.99-cp310-cp310-win_amd64.whl
+#    (wheel file should be in project directory)
+#
+# 3. For GPU support, install CUDA-enabled PyTorch:
+#    Visit: https://pytorch.org/get-started/locally/
+#    Select your CUDA version and follow the installation instructions
+#
+# 4. InsightFace models will be auto-downloaded on first use
+#    Models are stored in: ~/.insightface/models/
+#    Model: buffalo_l (default, ~500MB)
+#
+# 5. VGGFace2 model will be auto-downloaded on first use
+#    Model is cached by facenet-pytorch
+#    Model: InceptionResnetV1 pretrained='vggface2' (~100MB)
+#
+# 6. dlib shape predictor should be in dlib_models/ directory
+#    File: shape_predictor_68_face_landmarks.dat (~100MB)
+#    Download from: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+#
+# 7. Installation order (if encountering issues):
+#    a) pip install torch torchvision (CPU or CUDA version)
+#    b) pip install opencv-python opencv-contrib-python
+#    c) pip install insightface facenet-pytorch
+#    d) pip install dlib (or use wheel file on Windows)
+#    e) pip install -r requirements.txt (for remaining packages)

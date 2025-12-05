@@ -1,4 +1,5 @@
-# Face-Recognition-System-with-Mask-Augmentation
+# Face Recognition System with Mask Augmentation
+
 A comprehensive face recognition system that supports mask augmentation for improved recognition accuracy. This system uses deep learning models to register and recognize faces, with special support for masked face scenarios.
 
 ## 🎯 Features
@@ -247,7 +248,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 👤 Author
 
-[oshan dimantha]
+[Your Name]
 
 ## 🙏 Acknowledgments
 
@@ -259,3 +260,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📧 Contact
 
 For questions or support, please open an issue on GitHub.
+
+---
+
+⭐ If you find this project useful, please consider giving it a star!
